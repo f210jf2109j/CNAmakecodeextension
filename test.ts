@@ -13,10 +13,10 @@ const s4 = sprites.create(img`a a a`)
 
 const all = [s1, s2, s3, s4];
 
-splitScreen.cameraFollowSprite(splitScreen.Camera.Camera1, s1)
-splitScreen.cameraFollowSprite(splitScreen.Camera.Camera2, s2)
-splitScreen.cameraFollowSprite(splitScreen.Camera.Camera3, s3)
-// splitScreen.cameraFollowSprite(splitScreen.Camera.Camera4, s4)
+CodeNinjasAbbotsford.cameraFollowSprite(CodeNinjasAbbotsford.Camera.Camera1, s1)
+CodeNinjasAbbotsford.cameraFollowSprite(CodeNinjasAbbotsford.Camera.Camera2, s2)
+CodeNinjasAbbotsford.cameraFollowSprite(CodeNinjasAbbotsford.Camera.Camera3, s3)
+// CodeNinjasAbbotsford.cameraFollowSprite(splitScreen.Camera.Camera4, s4)
 
 let controllingIndex = 3;
 
