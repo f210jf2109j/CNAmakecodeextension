@@ -1,5 +1,5 @@
 {
-    "name": "arcade-split-screen",
+    "name": "CNA Extension",
     "version": "0.0.3",
     "description": "",
     "dependencies": {
@@ -16,7 +16,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.8.30",
+        "target": "1.12.46",
         "targetId": "arcade"
     },
     "supportedTargets": [
