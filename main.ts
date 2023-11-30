@@ -309,7 +309,7 @@ namespace CodeNinjasAbbotsford {
     }
 
     /**
-     * Game Made By The CNA sensei's
+     * Game Made By The CNA sensei's!
      * This Block Does Nothing...
      */
     //% blockId="cnamodifuncbrandingblock"
@@ -318,7 +318,7 @@ namespace CodeNinjasAbbotsford {
     export function cnamodifuncbrandingblock() { }
 
     /**
-     * Extention By The CNA Sensei's!
+     * Extension By The CNA Sensei's!
      * This Block Does Nothing...
      */
     //% blockId="cnamodibrandingblock"
