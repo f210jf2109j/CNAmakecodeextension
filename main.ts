@@ -1,7 +1,10 @@
-//% block="Split Screen"
-//% icon="\uf030"
-//% color="#bd7844"
-namespace splitScreen {
+
+// Modified Version's of multiple Extensions and including custom blocks
+
+//% block="Code Ninjas"
+//% icon="\uf121"
+//% color="#6d2fc4"
+namespace CodeNinjasAbbotsford {
     export enum Camera {
         //% block="one"
         Camera1,
@@ -60,6 +63,7 @@ namespace splitScreen {
         HorizontalQuarter4,
     }
 
+
     class CameraState {
         camera: scene.Camera;
         enabled: boolean;
@@ -74,6 +78,8 @@ namespace splitScreen {
         }
     }
 
+
+
     class SplitScreenState {
         cameras: CameraState[];
         fakeScreen: ScreenImage;
@@ -85,6 +91,8 @@ namespace splitScreen {
         borderColor: number;
 
         currentRenderIndex: number;
+
+
 
         constructor() {
             this.cameras = [
@@ -100,6 +108,8 @@ namespace splitScreen {
             this.enabled = true;
             this.currentRenderIndex = 0;
 
+
+
             game.currentScene().eventContext.registerFrameHandler(scene.PRE_RENDER_UPDATE_PRIORITY, () => {
                 for (const camera of this.cameras) {
                     if (camera.enabled) {
@@ -111,6 +121,8 @@ namespace splitScreen {
             this.renderable = scene.createRenderable(99, () => {
                 this.render();
             });
+
+
         }
 
         getCameraProperty(camera: Camera, property: CameraProperty) {
@@ -139,8 +151,11 @@ namespace splitScreen {
                     return top;
                 case CameraProperty.Bottom:
                     return top + state.renderHeight;
+
+
             }
         }
+
 
         protected render(skipDraw = false) {
             if (this.isRendering) {
@@ -294,6 +309,24 @@ namespace splitScreen {
     }
 
     /**
+     * Game Made By The CNA sensei's
+     * This Block Does Nothing...
+     */
+    //% blockId="cnamodifuncbrandingblock"
+    //% block="Game Made By The CNA Sensei's"
+    //% weight=0
+    export function cnamodifuncbrandingblock() { }
+
+    /**
+     * Extention By The CNA Sensei's!
+     * This Block Does Nothing...
+     */
+    //% blockId="cnamodibrandingblock"
+    //% block="Extention by the cna sensei's"
+    //% weight=100
+    export enum cnamodibrandingblock { }
+
+    /**
      * Anchors a splitscreen camera on a sprite
      */
     //% blockId=splitscreensetcanerasprite
@@ -301,7 +334,7 @@ namespace splitScreen {
     //% camera.shadow=splitscreen_camerashadow
     //% sprite.shadow=variables_get
     //% sprite.defl=mySprite
-    //% weight=100
+    //% weight=99
     export function cameraFollowSprite(camera: number, sprite: Sprite) {
         state().cameras[camera].camera.sprite = sprite;
         state().cameras[camera].enabled = true;
@@ -322,9 +355,9 @@ namespace splitScreen {
         cameraState.enabled = true;
     }
 
-     /**
-     * Applies screenshake to a splitscreen camera
-     */
+    /**
+    * Applies screenshake to a splitscreen camera
+    */
     //% blockId=splitscreencamerashake
     //% block="camera $camera shake by $amplitude pixels for $duration ms"
     //% amplitude.min=1
