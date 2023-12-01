@@ -355,7 +355,7 @@ namespace CodeNinjasAbbotsford {
     }
 
     /**
-     * Make's a sprite that's on the ground jump!
+     * Make's a sprite that's on the ground jump and fall!
      */
     //% blockId=makespritejump
     //% block="make $sprite jump and fall with vy $cvy ay $cay"
@@ -372,12 +372,27 @@ namespace CodeNinjasAbbotsford {
     }
 
     /**
+     * Make's a sprite infinitely jump and fall!
+     */
+    //% blockId=makespriteinfinitelyjump
+    //% block="make $sprite infinitely jump and fall with vy $cvy ay $cay"
+    //% sprite.shadow=variables_get
+    //% sprite.defl=mySprite
+    //% cay.defl=500
+    //% cvy.defl=-200
+    //% weight=86
+    export function makeSpriteInfinitelyJump(sprite: Sprite, cay: number, cvy: number) {
+        sprite.ay = cay;
+        sprite.vy = cvy;
+    }
+
+    /**
      * Sets a splitscreen camera's position.
      */
     //% blockId=splitscreencentercameraat
     //% block="center camera $camera at x $x y $y"
     //% camera.shadow=splitscreen_camerashadow
-    //% weight=90
+    //% weight=65
     export function centerCameraAt(camera: number, x: number, y: number) {
         const cameraState = state().cameras[camera];
         cameraState.camera.sprite = undefined;
