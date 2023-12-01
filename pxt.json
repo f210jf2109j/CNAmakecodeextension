@@ -7,8 +7,7 @@
     },
     "files": [
         "main.ts",
-        "README.md",
-        "assets.json"
+        "README.md"
     ],
     "testFiles": [
         "testJres.jres",

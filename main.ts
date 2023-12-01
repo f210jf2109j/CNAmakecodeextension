@@ -299,7 +299,7 @@ namespace CodeNinjasAbbotsford {
     let stateStack: SplitScreenState[];
 
     /**
-     * Adds a splitscreen camera to a game
+     * Adds a splitscreen camera to a game.
      */
     //% blockId="splitscreencamerafollowsprite"
     //% block="split screen camera follow $sprite"
@@ -327,7 +327,7 @@ namespace CodeNinjasAbbotsford {
     export enum cnamodibrandingblock { }
 
     /**
-     * Anchors a splitscreen camera on a sprite
+     * Anchors a splitscreen camera on a sprite.
      */
     //% blockId=splitscreensetcanerasprite
     //% block="camera $camera follow $sprite"
@@ -355,25 +355,24 @@ namespace CodeNinjasAbbotsford {
     }
 
     /**
-     * Make's The Sprite Jump!
-     * The Sprite Will Only Be Able To Jump On The Ground!
+     * Make's a sprite that's on the ground jump!
      */
     //% blockId=makespritejump
-    //% block="make $sprite jump on ground with ay $acceleration vy $velocity"
+    //% block="make $sprite jump on ground with ay $cay vy $cvy"
     //% sprite.shadow=variables_get
     //% sprite.defl=mySprite
-    //% acceleration.defl=200
-    //% velocity.defl=-115
+    //% cay.defl=200
+    //% cvy.defl=-115
     //% weight=88
-    export function makeSpriteJump(sprite: Sprite, acceleration: number, velocity: number) {
-        sprite.ay = acceleration;
+    export function makeSpriteJump(sprite: Sprite, cay: number, cvy: number) {
+        sprite.ay = cay;
         if (sprite.vy == 0) {
-            sprite.vy = velocity;
+            sprite.vy = cvy;
         }
     }
 
     /**
-     * Sets a splitscreen camera's position
+     * Sets a splitscreen camera's position.
      */
     //% blockId=splitscreencentercameraat
     //% block="center camera $camera at x $x y $y"
@@ -388,7 +387,7 @@ namespace CodeNinjasAbbotsford {
     }
 
     /**
-    * Applies screenshake to a splitscreen camera
+    * Applies screenshake to a splitscreen camera.
     */
     //% blockId=splitscreencamerashake
     //% block="camera $camera shake by $amplitude pixels for $duration ms"
