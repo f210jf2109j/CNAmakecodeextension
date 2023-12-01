@@ -341,6 +341,38 @@ namespace CodeNinjasAbbotsford {
     }
 
     /**
+     * Gets The Distance Between Two Sprites.
+     */
+    //% blockId=getdistanceapart
+    //% block="distance apart $asprite $bsprite"
+    //% asprite.shadow=variables_get
+    //% asprite.defl=mySprite
+    //% bsprite.shadow=variables_get
+    //% bsprite.defl=mySprite
+    //% weight=5
+    export function getDistanceApart(asprite: Sprite, bsprite: Sprite) {
+        return Math.round(Math.sqrt((asprite.x - bsprite.x) ** 2 + (asprite.y - bsprite.y) ** 2))
+    }
+
+    /**
+     * Make's The Sprite Jump!
+     * The Sprite Will Only Jump On The Ground!
+     */
+    //% blockId=makespritejump
+    //% block="make $sprite jump on ground with ay $acceleration vy $velocity"
+    //% sprite.shadow=variables_get
+    //% sprite.defl=mySprite
+    //% acceleration.defl=200
+    //% velocity.defl=-115
+    //% weight=88
+    export function makeSpriteJump(sprite: Sprite, acceleration: number, velocity: number) {
+        sprite.ay = acceleration;
+        if (sprite.vy == 0) {
+            sprite.vy = velocity;
+        }
+    }
+
+    /**
      * Sets a splitscreen camera's position
      */
     //% blockId=splitscreencentercameraat
@@ -366,7 +398,7 @@ namespace CodeNinjasAbbotsford {
     //% duration.shadow=timePicker
     //% duration.defl=500
     //% camera.shadow=splitscreen_camerashadow
-    //% weight=80
+    //% weight=60
     export function cameraShake(camera: number, amplitude: number = 4, duration: number = 500) {
         const cameraState = state().cameras[camera];
         cameraState.camera.shake(amplitude, duration);
@@ -380,7 +412,7 @@ namespace CodeNinjasAbbotsford {
     //% block="set camera $camera region to $region"
     //% camera.shadow=splitscreen_camerashadow
     //% region.shadow=splitscreen_cameraregionshadow
-    //% weight=70
+    //% weight=51
     export function setCameraRegion(camera: number, region: number) {
         state().cameras[camera].region = region;
     }
@@ -390,7 +422,7 @@ namespace CodeNinjasAbbotsford {
      */
     //% blockId=splitscreencamerasetenabled
     //% block="set split screen enabled $enabled"
-    //% weight=60
+    //% weight=80
     export function setSplitScreenEnabled(enabled: boolean) {
         state().enabled = enabled;
     }
