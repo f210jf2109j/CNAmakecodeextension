@@ -358,7 +358,7 @@ namespace CodeNinjasAbbotsford {
      * Make's a sprite that's on the ground jump!
      */
     //% blockId=makespritejump
-    //% block="make $sprite jump on ground with ay $cay vy $cvy"
+    //% block="make $sprite jump and fall with vy $cvy ay $cay"
     //% sprite.shadow=variables_get
     //% sprite.defl=mySprite
     //% cay.defl=200
