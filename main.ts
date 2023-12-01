@@ -349,7 +349,7 @@ namespace CodeNinjasAbbotsford {
     //% asprite.defl=mySprite
     //% bsprite.shadow=variables_get
     //% bsprite.defl=mySprite
-    //% weight=5
+    //% weight=75
     export function getDistanceApart(asprite: Sprite, bsprite: Sprite) {
         return Math.round(Math.sqrt((asprite.x - bsprite.x) ** 2 + (asprite.y - bsprite.y) ** 2))
     }
