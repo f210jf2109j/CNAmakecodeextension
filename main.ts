@@ -356,10 +356,10 @@ namespace CodeNinjasAbbotsford {
 
     /**
      * Make's The Sprite Jump!
-     * The Sprite Will Only Be Jump On The Ground!
+     * The Sprite Will Only Be Able To Jump On The Ground!
      */
     //% blockId=makespritejump
-    //% block="make $sprite jump on ground with ay $acceleration vy $velocity "
+    //% block="make $sprite jump on ground with ay $acceleration vy $velocity"
     //% sprite.shadow=variables_get
     //% sprite.defl=mySprite
     //% acceleration.defl=200
