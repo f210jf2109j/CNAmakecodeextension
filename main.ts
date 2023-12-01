@@ -358,16 +358,16 @@ namespace CodeNinjasAbbotsford {
      * Make's a sprite that's on the ground jump and fall!
      */
     //% blockId=makespritejump
-    //% block="make $sprite jump and fall with vy $cvy ay $cay"
+    //% block="make $sprite jump and fall with vy $msjvy ay $msjay"
     //% sprite.shadow=variables_get
     //% sprite.defl=mySprite
-    //% cay.defl=200
-    //% cvy.defl=-115
+    //% msjay.defl=200
+    //% msjvy.defl=-115
     //% weight=88
-    export function makeSpriteJump(sprite: Sprite, cay: number, cvy: number) {
-        sprite.ay = cay;
+    export function makeSpriteJump(sprite: Sprite, msjay: number, msjvy: number) {
+        sprite.ay = msjay;
         if (sprite.vy == 0) {
-            sprite.vy = cvy;
+            sprite.vy = msjvy;
         }
     }
 
@@ -375,15 +375,15 @@ namespace CodeNinjasAbbotsford {
      * Make's a sprite infinitely jump and fall!
      */
     //% blockId=makespriteinfinitelyjump
-    //% block="make $sprite infinitely jump and fall with vy $cvy ay $cay"
+    //% block="make $sprite infinitely jump and fall with vy $msijvy ay $msijay"
     //% sprite.shadow=variables_get
     //% sprite.defl=mySprite
-    //% cay.defl=500
-    //% cvy.defl=-200
+    //% msijay.defl=500
+    //% msijvy.defl=-200
     //% weight=86
-    export function makeSpriteInfinitelyJump(sprite: Sprite, cay: number, cvy: number) {
-        sprite.ay = cay;
-        sprite.vy = cvy;
+    export function makeSpriteInfinitelyJump(sprite: Sprite, msijay: number, msijvy: number) {
+        sprite.ay = msijay;
+        sprite.vy = msijvy;
     }
 
     /**
