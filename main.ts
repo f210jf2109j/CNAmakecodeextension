@@ -312,7 +312,7 @@ namespace CodeNinjasAbbotsford {
      * After a certain amount of time, the attached code will run.
      * Blocks after this one will run without waiting.
      */
-    //% block="after $time do"
+    //% block="after $time ms do"
     //% time.defl=500
     //% handlerStatement=1
     //% %time=timePicker ms"
