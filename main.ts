@@ -308,6 +308,8 @@ namespace CodeNinjasAbbotsford {
         cameraFollowSprite(Camera.Camera1, sprite);
     }
 
+
+
     /**
      * After a certain amount of time, the attached code will run.
      * Blocks after this one will run without waiting.
@@ -329,6 +331,20 @@ namespace CodeNinjasAbbotsford {
     //% handlerStatement=1
     export function background(then: () => void) {
         control.runInBackground(then)
+    }
+
+    /**
+     * Allows You To Set A custom Screen Size And Resolution
+     */
+    //% blockId="cnasetscreensize"
+    //% block="Set Screen Size Width $ScreenWidth Height $ScreenHeight"
+    //% ScreenWidth.defl=160
+    //% ScreenHeight.defl=120
+    //% %ScreenWidth=Screen Width"
+    //% %ScreenHeight=Screen Height"
+    export function cnasetscreensize(ScreenWidth: number, ScreenHeight: number) {
+        const ARCADE_SCREEN_WIDTH = ScreenWidth;
+        const ARCADE_SCREEN_HEIGHT = ScreenHeight;
     }
 
     /**
