@@ -333,17 +333,6 @@ namespace CodeNinjasAbbotsford {
         control.runInBackground(then)
     }
 
-    /**
-     * Allows You To Set A custom Screen Size And Resolution
-     */
-    //% blockId="cnasetscreensize"
-    //% block="Set Screen Size Width $ScreenWidth Height $ScreenHeight"
-    //% ScreenWidth.defl=160
-    //% ScreenHeight.defl=120
-    export function cnasetscreensize(ScreenWidth: number, ScreenHeight: number) {
-         const ARCADE_SCREEN_WIDTH = ScreenWidth;
-         const ARCADE_SCREEN_HEIGHT = ScreenHeight;
-    }
 
     /**
      * Game Made By The CNA sensei's!
