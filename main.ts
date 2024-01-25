@@ -340,11 +340,9 @@ namespace CodeNinjasAbbotsford {
     //% block="Set Screen Size Width $ScreenWidth Height $ScreenHeight"
     //% ScreenWidth.defl=160
     //% ScreenHeight.defl=120
-    //% %ScreenWidth=Screen Width"
-    //% %ScreenHeight=Screen Height"
     export function cnasetscreensize(ScreenWidth: number, ScreenHeight: number) {
-        const ARCADE_SCREEN_WIDTH = ScreenWidth;
-        const ARCADE_SCREEN_HEIGHT = ScreenHeight;
+         const ARCADE_SCREEN_WIDTH = ScreenWidth;
+         const ARCADE_SCREEN_HEIGHT = ScreenHeight;
     }
 
     /**
